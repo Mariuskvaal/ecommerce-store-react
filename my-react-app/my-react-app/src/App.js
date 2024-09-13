@@ -1,9 +1,16 @@
-import React from "react";
-
-const greeting = React.createElement();
+// src/App.js
+import React from 'react';
+import HomePage from './pages/HomePage.js';
+import './App.css';  // Optional: For global styling
 
 function App() {
-  return <div> Hello World </div>;
+  return (
+    <div className="App">
+      <HomePage />
+    </div>
+  );
 }
 
 export default App;
+
+
