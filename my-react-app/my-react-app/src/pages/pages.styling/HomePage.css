@@ -1,0 +1,47 @@
+/* src/pages/HomePage.css */
+.HomePage {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.view-product-button {
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-product-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+  
+
+  

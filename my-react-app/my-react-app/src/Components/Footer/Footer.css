@@ -8,5 +8,14 @@
   }
 
   footer {
-    margin-top: 20px;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+  
+  footer p {
+    margin: 0;
   }
