@@ -6,7 +6,7 @@ import './App.css';  // Optional: For global styling
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <HomePage/>
     </div>
   );
 }

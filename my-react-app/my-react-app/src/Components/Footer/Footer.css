@@ -1,4 +1,3 @@
-/* src/pages/HomePage.css */
 .HomePage {
     padding: 20px;
     background-color: #f9f9f9;
@@ -7,10 +6,7 @@
   header h1 {
     color: #ffffff;
   }
-  
-  main section {
+
+  footer {
     margin-top: 20px;
   }
-  
-
-  
