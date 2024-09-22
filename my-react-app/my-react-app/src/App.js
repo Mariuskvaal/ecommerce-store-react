@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Layout>
-      <Routes>
+        <Routes>
           <Route path="/" element={<HomePage />} />  {/* Home page route */}
           <Route path="/contact" element={<ContactPage />} />  {/* Contact page route */}
           <Route path="/product/:id" element={<ProductPage />} />  {/* Product page with dynamic ID route */}
@@ -26,6 +26,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

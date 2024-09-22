@@ -5,7 +5,7 @@ function ContactPage() {
   return (
     <div>
       <h1>Contact Us</h1>
-      <p>This is the contact page.</p>
+      <p>This is the contact page. how is </p>
     </div>
   );
 }

@@ -18,14 +18,14 @@ function HomePage() {
         return response.json();
       })
       .then((data) => {
-        setProducts(data);  // Set the products in state
+        setProducts(data.data);  // Ensure you are using the right API response structure
         setLoading(false);   // Disable loading state
       })
       .catch((error) => {
         setError(error.message);  // Set error message
         setLoading(false);        // Disable loading state
       });
-  }, []);  // Empty dependency array ensures this runs once when the component mounts
+  }, []);
 
   if (loading) {
     return <p>Loading products...</p>;
@@ -39,9 +39,9 @@ function HomePage() {
     <div className="HomePage">
       <h2>Products</h2>
       <div className="products">
-        {products.data && products.data.length > 0 ? (
-          products.data.map((product) => (
-            <Product key={product.id} product={product} />  // Render the Product component
+        {products && products.length > 0 ? (
+          products.map((product) => (
+            <Product key={product.id} product={product} />  // Pass the correct UUID for each product
           ))
         ) : (
           <p>No products available.</p>
@@ -52,6 +52,7 @@ function HomePage() {
 }
 
 export default HomePage;
+
 
 
 
