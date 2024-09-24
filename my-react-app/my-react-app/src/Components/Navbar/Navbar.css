@@ -115,6 +115,206 @@
   background-color: #f1f1f1;
 }
 
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-result-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.search-result-item:hover {
+  background-color: #f1f1f1;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none; /* Ensure the link has no underline */
+  color: black; /* Ensure the text color matches your design */
+}
+
+.search-result-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.search-result-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-logo {
+  font-size: 24px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.close-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search {
+  margin-right: 20px; /* Adjust space between search and other icons */
+}
+
+.search-icon {
+  font-size: 24px; /* Size of the search icon */
+  color: white;
+  cursor: pointer; /* Acts as a button */
+}
+
+.navbar-cart {
+  position: relative;
+  margin-right: 20px; /* Adjust space between cart and other icons */
+}
+
+.cart-icon {
+  font-size: 24px; /* Size of the shopping cart icon */
+  color: white;
+  cursor: pointer; /* Acts as a button */
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Search Bar Styles (displayed below the navbar) */
+.search-bar-container {
+  position: absolute;
+  top: 50px; /* Adjust as per the height of your navbar */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+.search-results {
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-result-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column; /* Ensure it shows up on mobile */
+    z-index: 11; /* Ensure it's above the menu */
+    position: relative;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 20px; /* Distance from top */
+    left: -100%;
+    width: 70%; /* Set menu to take up 70% of the screen */
+    height: 100vh;
+    flex-direction: column;
+    background-color: #333;
+    transition: left 0.3s ease;
+    padding-top: 50px;
+    align-items: center; /* Center the links horizontally */
+    gap: 30px; /* Increase gap between links */
+    z-index: 10;
+  }
+
+  .navbar-links.open {
+    left: 0;
+  }
+
+  .hamburger-icon, .close-icon {
+    font-size: 24px; /* Adjust the size as needed */
+    color: white; /* Ensure the icon matches your design */
+    cursor: pointer;
+  }
+}
+
+
+
+
 
 /* Mobile styles */
 /* Mobile styles */

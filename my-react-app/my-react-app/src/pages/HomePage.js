@@ -1,14 +1,12 @@
-// src/pages/HomePage.js
 import React, { useState, useEffect } from 'react';
-import Product from '../Components/product/product';  // Import the Product component
-import './pages.styling/HomePage.css';  // Optional: For custom styling
+import Product from '../Components/product/product';
+import './pages.styling/HomePage.css';
 
 function HomePage() {
-  const [products, setProducts] = useState([]);  // State to hold the products
-  const [loading, setLoading] = useState(true);  // State to show loading state
-  const [error, setError] = useState(null);      // State to show error message
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Fetch products when the component mounts
   useEffect(() => {
     fetch('https://v2.api.noroff.dev/online-shop')
       .then((response) => {
@@ -18,12 +16,12 @@ function HomePage() {
         return response.json();
       })
       .then((data) => {
-        setProducts(data.data);  // Ensure you are using the right API response structure
-        setLoading(false);   // Disable loading state
+        setProducts(data.data);
+        setLoading(false);
       })
       .catch((error) => {
-        setError(error.message);  // Set error message
-        setLoading(false);        // Disable loading state
+        setError(error.message);
+        setLoading(false);
       });
   }, []);
 
@@ -41,7 +39,7 @@ function HomePage() {
       <div className="products">
         {products && products.length > 0 ? (
           products.map((product) => (
-            <Product key={product.id} product={product} />  // Pass the correct UUID for each product
+            <Product key={product.id} product={product} />
           ))
         ) : (
           <p>No products available.</p>
@@ -52,6 +50,8 @@ function HomePage() {
 }
 
 export default HomePage;
+
+
 
 
 

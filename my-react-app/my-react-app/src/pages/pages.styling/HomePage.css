@@ -37,6 +37,58 @@
   background-color: #0056b3;
 }
 
+/* Add this to your HomePage.css or create a SearchBar.css */
+
+.search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.suggestions {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* CSS adjustments to ensure the search results show properly */
+.navbar-search {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 200px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  z-index: 20;
+}
+
+.search-result-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f1f1f1;
+}
+
+
+
 
 
 
