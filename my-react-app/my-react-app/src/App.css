@@ -1,6 +1,8 @@
 /* src/App.css */
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
 }
 
@@ -10,6 +12,19 @@ header {
   padding: 1em;
   text-align: center;
 }
+
+/* Wrapper for all content above the footer */
+.content-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout should grow to fill available space, pushing the footer down */
+.layout {
+  flex: 1;
+}
+
 
 nav ul {
   list-style-type: none;
@@ -31,15 +46,7 @@ main {
   background-color: #f0f0f0;
 }
 
-footer {
-  background-color: #282c34;
-  color: white;
-  text-align: center;
-  padding: 1em;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
+
 
 
 
