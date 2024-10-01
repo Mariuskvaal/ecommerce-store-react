@@ -1,118 +1,102 @@
-// src/pages/ContactPage.js
 import React, { useState } from 'react';
-import './pages.styling/ContactPage.css';  // Assuming you'll create a separate CSS file for styling
+import SuccessModal from '../Components/SuccessModal.js/SuccessModal'; // Import the modal component
+import './pages.styling/ContactPage.css';
+import '../pages/pages.styling/ContactPage.css';
 
 function ContactPage() {
   const [formData, setFormData] = useState({
     fullName: '',
     subject: '',
     email: '',
-    body: ''
+    message: ''
   });
 
-  const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false); // State to control modal visibility
 
-  // Handler for input changes
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
-  // Form validation
-  const validateForm = () => {
-    const newErrors = {};
-    if (formData.fullName.trim().length < 3) {
-      newErrors.fullName = 'Full name must be at least 3 characters long';
-    }
-    if (formData.subject.trim().length < 3) {
-      newErrors.subject = 'Subject must be at least 3 characters long';
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-    if (formData.body.trim().length < 3) {
-      newErrors.body = 'Message must be at least 3 characters long';
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    // Simple validation (can be improved)
+    if (formData.fullName && formData.subject && formData.email && formData.message) {
+      setIsSubmitted(true); // Show the success modal
+      console.log('Form submitted:', formData);
+    } else {
+      alert('Please fill out all fields.');
+    }
   };
 
-  // Handler for form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();  // Prevent page refresh on form submit
-    if (validateForm()) {
-      console.log('Form submitted successfully:', formData);
-      // Here, form data is logged once validation is successful
-      alert('Form submitted successfully');
-    }
+  const closeModal = () => {
+    setIsSubmitted(false);
+    setFormData({
+      fullName: '',
+      subject: '',
+      email: '',
+      message: ''
+    }); // Reset form after submission
   };
 
   return (
     <div className="contact-page">
       <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="fullName">Full Name</label>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Full Name:
           <input
             type="text"
-            id="fullName"
             name="fullName"
             value={formData.fullName}
-            onChange={handleInputChange}
+            onChange={handleChange}
             required
+            minLength="3"
           />
-          {errors.fullName && <p className="error">{errors.fullName}</p>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="subject">Subject</label>
+        </label>
+        <label>
+          Subject:
           <input
             type="text"
-            id="subject"
             name="subject"
             value={formData.subject}
-            onChange={handleInputChange}
+            onChange={handleChange}
             required
+            minLength="3"
           />
-          {errors.subject && <p className="error">{errors.subject}</p>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
+        </label>
+        <label>
+          Email:
           <input
             type="email"
-            id="email"
             name="email"
             value={formData.email}
-            onChange={handleInputChange}
+            onChange={handleChange}
             required
           />
-          {errors.email && <p className="error">{errors.email}</p>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="body">Message</label>
+        </label>
+        <label>
+          Message:
           <textarea
-            id="body"
-            name="body"
-            value={formData.body}
-            onChange={handleInputChange}
-            rows="4"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             required
+            minLength="3"
           />
-          {errors.body && <p className="error">{errors.body}</p>}
-        </div>
-
-        <button type="submit" className="submit-button">Submit</button>
+        </label>
+        <button type="submit">Submit</button>
       </form>
+
+      {isSubmitted && <SuccessModal onClose={closeModal} />}
     </div>
   );
 }
 
 export default ContactPage;
+
 

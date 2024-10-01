@@ -1,66 +1,64 @@
-/* ContactPage.css */
-
 .contact-page {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
   }
   
   .contact-page h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
   }
   
-  .contact-form {
+  form {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
   
-  .form-group {
+  label {
     display: flex;
     flex-direction: column;
-  }
-  
-  .form-group label {
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #555;
   }
   
-  .form-group input,
-  .form-group textarea {
+  input[type="text"],
+  input[type="email"],
+  textarea {
     padding: 10px;
-    font-size: 1em;
     border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  .error {
-    color: red;
-    font-size: 0.9em;
+    border-radius: 5px;
     margin-top: 5px;
+    font-size: 1em;
   }
   
-  .submit-button {
-    background-color: #28a745;
+  textarea {
+    height: 100px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1em;
     cursor: pointer;
-    align-self: center;
-    transition: background-color 0.3s ease;
+    font-size: 1em;
   }
   
-  .submit-button:hover {
-    background-color: #218838;
+  button[type="submit"]:hover {
+    background-color: #0056b3;
   }
+  
+  @media (max-width: 768px) {
+    .contact-page {
+      width: 90%;
+    }
+  }
+  
   

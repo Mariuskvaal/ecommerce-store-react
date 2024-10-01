@@ -1,0 +1,40 @@
+/* Checkout success page styling */
+
+.checkout-success-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+  }
+  
+  .checkout-success-page h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2em;
+    color: #444;
+  }
+  
+  .checkmark-icon {
+    color: #28a745; /* Green color for the checkmark */
+    font-size: 1.5em;
+  }
+  
+  .back-to-store-link {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .back-to-store-link:hover {
+    background-color: #0056b3;
+  }
+  
+  
