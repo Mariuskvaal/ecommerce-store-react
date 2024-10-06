@@ -1,5 +1,4 @@
 /* Navbar styles */
-/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -24,6 +23,18 @@
   display: none;
   cursor: pointer;
 }
+
+.navbar-logo {
+  font-size: 30px; /* Increase the font size for better visibility */
+  font-weight: bold;
+  color: #62aeff; /* Use a color that stands out, adjust as needed */
+  cursor: pointer;
+}
+
+.navbar-logo:hover {
+  color: #0056b3; /* Lighter shade on hover for effect */
+}
+
 
 .bar {
   width: 25px;

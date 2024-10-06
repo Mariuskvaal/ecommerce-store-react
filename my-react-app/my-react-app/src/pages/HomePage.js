@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Product from '../Components/product/product';
 import './pages.styling/HomePage.css';
+import shoppingmall from '../Components/Assets/image/shoppingmall.jpg'; // Import the shopping image
 
 function HomePage() {
   const [products, setProducts] = useState([]);
@@ -35,7 +36,18 @@ function HomePage() {
 
   return (
     <div className="HomePage">
-      <h2>Products</h2>
+      {/* Updated Banner Section */}
+      <div className="banner-section">
+        <img src={shoppingmall} alt="Shopping Banner" className="banner-image" />
+        <div className="banner-overlay">
+          <h1 className="banner-heading">Welcome to Our Store</h1>
+          <button className="contact-button" onClick={() => window.location.href = '/contact'}>
+            Contact Us
+          </button>
+        </div>
+      </div>
+      
+      <h2> Our Products</h2>
       <div className="products">
         {products && products.length > 0 ? (
           products.map((product) => (
@@ -50,6 +62,8 @@ function HomePage() {
 }
 
 export default HomePage;
+
+
 
 
 

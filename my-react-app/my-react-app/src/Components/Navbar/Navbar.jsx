@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faShoppingCart, faSearch } from '@fortawesome/free-solid-svg-icons'; // Import icons
+import { faBars, faTimes, faShoppingCart, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';  // Import Link and useNavigate from react-router-dom
 import { CartContext } from '../Cart/CartContext';  // Import CartContext
 
@@ -65,11 +65,13 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-logo">MyLogo</div>
+        <div className="navbar-logo" onClick={() => navigate('/')}>
+          <span className="navbar-logo-text">React Store</span>
+        </div>
 
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
           <Link to="/" onClick={toggleMenu}>Home</Link>
-          <Link to="/productPage" onClick={toggleMenu}>Products</Link>
+
           <Link to="/contact" onClick={toggleMenu}>Contact</Link>
         </div>
 
