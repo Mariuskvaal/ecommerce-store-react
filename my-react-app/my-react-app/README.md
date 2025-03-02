@@ -1,5 +1,5 @@
 # semester-project-2-bootstrap
-![Screenshot of the homescreen in mobile](https://github.com/Mariuskvaal/ecommerce-store-react/my-react-app/src/Components/Assets/images/Ecommerce-store-front-page)
+![Ecommerce Store Front Page](https://github.com/Mariuskvaal/semester-project-2-bootstrap/blob/main/src/components/Assets/image/Ecommerce-store-front-page.png)
 
 ## Overview
 A Bootstrap-based responsive website designed for an engaging user experience across devices, featuring dynamic functionalities such as user profile management and listing creations. 
